@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+{% include 'header.html.twig' %}
+<section class="banner">
+    <div class="filter">
+        <div class="hero">
+            <div class="textBx">
+                <h1>Bienvenue dans l'Axe<br><span>Coding Innovation Digitale</span></h1>
+                {% if not app.user %}
+                    <a href="/login" class="btn">Se connecter</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="askBx" id="askBx">
+    <div class="heading">
+        <h2>A quoi sert ce site ?</h2>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum possimus doloribus iure. Dicta mollitia voluptatibus consectetur, amet, aut omnis saepe nam voluptatem magni, ullam provident explicabo accusantium corporis incidunt et!</p>
+</section>
+
+
+<section  class="who">
+    <div class="left">
+        <h2>Qui sommes-nous ?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut dignissim nibh. Quisque et quam condimentum, suscipit est ut, porttitor nisi. Phasellus consequat tincidunt turpis. Sed vel sodales eros. Donec vitae semper justo, non ultricies sem. Curabitur eget posuere felis, vitae ullamcorper velit. </p>
+    </div>
+
+    <div class="right">
+        <img src="{{asset('img/pole.jpg')}}" alt="Image pole">
+    </div>
+</section>
+<footer></footer>
+    <script src="{{asset('js/header.js')}}"></script>
+
+{% endblock %}
+

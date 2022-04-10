@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ project.name }}{% endblock %}
+
+{% block body %}
+    {% include 'header_sticky.html.twig' %}
+
+
+    <div class="presentation_project">
+        <div>
+            <h1>{{ project.name }}</h1>
+            <p>{{ project.description }}</p>
+        </div>
+        {% if project.projectLogo %}
+            <img src="{{ asset('uploads/projects/projects_logo/') }}{{ project.projectLogo }}" alt="">
+        {% endif %}
+
+    </div>
+
+    {% if project.projectImage %}
+        <div class="slider">
+            <div class="image_slider">
+                <img src="{{ asset('uploads/projects/projects_image/') }}{{ project.projectImage }}" alt="">
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="technologies">
+        <p>Technologie Utilisé</p>
+        <div class="logo_techno">
+            {% for techno in project.tech.toArray %}
+                <div class="logo">
+                    <img src="{{ asset('uploads/tech_logo/') }}{{ techno.logo }}" alt="">
+                    <p class="logo-name">{{ techno.name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% if project.collaborators|length > 0 %}
+        <div class="collaborateur">
+            <p>Collaborateurs</p>
+            <div>
+                {% for collaborator in project.collaborators.toArray %}
+                    <img src="{{ asset('img/icon-user.png') }}" alt="{{ collaborator.email }}" title="{{ collaborator.email }}">
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock %}

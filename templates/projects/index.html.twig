@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projets{% endblock %}
+
+{% block body %}
+    {% include 'header_sticky.html.twig' %}
+    <section class="projects_section">
+        {% for project in projects %}
+            <div class="card">
+                <a href="{{ path('project', {'id': project.id}) }}"><h2 class="card_title">{{ project.name }}</h2></a>
+                <hr>
+                    <div class="flex-top">
+                        <div class="img_div">
+                            <img src="{{ asset('uploads/projects/projects_image/') }}{{ project.projectImage }}" alt="{{ project.name }}">
+                        </div>
+                        <div class="info">
+                            <div class="div_techno">
+                                {% for tech in project.tech.toArray|slice(0,3)  %}
+                                    <div class="circle">
+                                        <img src="{{ asset('uploads/tech_logo/') }}{{ tech.logo }}" alt="{{ tech.name }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="div_collab">
+                                {% for collaborator in project.collaborators.toArray|slice(0,3)  %}
+                                    <div class="circle">
+                                        <img src="{{ asset('img/icon-user.png') }}" alt="{{ collaborator.email }}" title="{{ collaborator.email }}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <p>{{ project.description }}</p>
+                    <p class="date">{{ project.createdAt|date("m/d/Y") }}</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

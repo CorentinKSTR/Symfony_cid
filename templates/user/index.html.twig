@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{#{% form_theme form 'bootstrap_5_layout.html.twig' %}#}
+{% block title %}Ajouter un projet{% endblock %}
+
+{% block body %}
+    {% include 'header_sticky.html.twig' %}
+    <div style="margin-top: 100px;">
+        {{ form_start(form) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

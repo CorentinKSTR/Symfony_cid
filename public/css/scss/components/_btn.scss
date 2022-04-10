@@ -1,0 +1,19 @@
+.btn{
+    position: relative;
+    background: $orange;
+    display: inline-block;
+    color: #fff;
+    margin-top: 150px;
+    padding: 20px 60px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.3s;
+    border-radius: 20px;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}

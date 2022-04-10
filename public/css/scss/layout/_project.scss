@@ -1,0 +1,129 @@
+.presentation_project{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 100px auto 0;
+  font-size: 24px;
+  padding: 20px;
+  justify-content: space-between;
+
+  div{
+    width: 60%;
+    h1{
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+
+    p{
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+
+  p{
+    margin-right: 5%;
+  }
+
+  img{
+    width: 30%;
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.slider{
+  height: 400px;
+  margin: 100px 0;
+
+  .image_slider{
+    width: 800px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+
+    img{
+      width: 100%;
+      object-position: center;
+      object-fit: contain;
+      max-height: 300px;
+    }
+  }
+}
+
+
+
+.technologies{
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+
+  p{
+    font-size: 30px;
+  }
+
+  .logo_techno{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+
+    .logo{
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      img{
+        max-width: 100px;
+        max-height: 100px;
+        object-fit: cover;
+        object-position: center;
+        transition: .5s;
+      }
+
+      p{
+        position: absolute;
+        top: 50%;
+        color: black;
+        left: 50%;
+        font-weight: 700;
+        font-size: 24px;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: .5s;
+        text-align: center;
+      }
+
+      &.reverse{
+        img{
+          opacity: 0.1;
+        }
+
+        p{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.collaborateur{
+  width: 80%;
+  height: auto;
+  margin: 20px auto 100px;
+  padding: 20px;
+
+  p{
+    font-size: 30px;
+  }
+
+  img{
+    width: 100px;
+    height: 120px;
+    margin: 1%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
